@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    scrollbar-color: #3a3f4c #14171f;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-void text-ink font-body antialiased;
+  }
+
+  ::selection {
+    background: #e3aa3d;
+    color: #0c0e13;
+  }
+
+  :focus-visible {
+    outline: 2px solid #e3aa3d;
+    outline-offset: 3px;
+  }
+}
+
+@layer utilities {
+  /* Film sprocket-hole rule, used as a structural divider instead of shadows */
+  .sprocket-edge {
+    background-image: radial-gradient(circle, #0c0e13 2.5px, transparent 2.5px);
+    background-size: 16px 100%;
+    background-position: center;
+    height: 8px;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
