@@ -84,7 +84,7 @@ export default function MovieModal({ showId, onClose }) {
         aria-labelledby="modal-title"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Backdrop */}
+    
         <div className="relative">
           <div className="aspect-[16/8] w-full overflow-hidden bg-slate-800">
             {backdrop ? (
@@ -103,7 +103,7 @@ export default function MovieModal({ showId, onClose }) {
             )}
           </div>
 
-          {/* Close Button */}
+        
           <button
             type="button"
             onClick={onClose}
@@ -114,7 +114,7 @@ export default function MovieModal({ showId, onClose }) {
           </button>
         </div>
 
-        {/* Content */}
+   
         <div className="p-6 sm:p-8">
           {isLoading && (
             <div className="flex items-center gap-2 text-sm text-slate-400">
@@ -134,7 +134,7 @@ export default function MovieModal({ showId, onClose }) {
 
           {details && !isLoading && (
             <>
-              {/* Title */}
+      
               <h2
                 id="modal-title"
                 className="text-2xl font-bold text-white sm:text-3xl"
@@ -142,7 +142,7 @@ export default function MovieModal({ showId, onClose }) {
                 {details.name}
               </h2>
 
-              {/* Basic Info */}
+       
               <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm text-slate-400">
                 <span className="flex items-center gap-2">
                   <FaStar
@@ -167,7 +167,7 @@ export default function MovieModal({ showId, onClose }) {
                 )}
               </div>
 
-              {/* Genres */}
+   
               {details.genres?.length > 0 && (
                 <div className="mt-5 flex flex-wrap gap-2">
                   {details.genres.map((genre) => (
@@ -181,7 +181,7 @@ export default function MovieModal({ showId, onClose }) {
                 </div>
               )}
 
-              {/* Overview */}
+      
               <div className="mt-7">
                 <h3 className="text-sm font-semibold text-white">
                   Overview
@@ -192,7 +192,7 @@ export default function MovieModal({ showId, onClose }) {
                 </p>
               </div>
 
-              {/* Cast */}
+ 
               {cast.length > 0 && (
                 <div className="mt-7">
                   <h3 className="text-sm font-semibold text-white">
@@ -208,7 +208,7 @@ export default function MovieModal({ showId, onClose }) {
                 </div>
               )}
 
-              {/* Close */}
+  
               <button
                 type="button"
                 onClick={onClose}

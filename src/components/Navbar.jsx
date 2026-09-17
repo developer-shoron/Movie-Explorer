@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-slate-800 bg-slate-950">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
-        {/* Logo */}
+  
         <Link
           to="/"
           className="flex items-center gap-2.5"
@@ -22,7 +22,7 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Navigation */}
+      
         <nav className="flex items-center gap-3 sm:gap-6">
           <NavLink
             to="/"

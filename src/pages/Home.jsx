@@ -27,7 +27,7 @@ export default function Home() {
       <HeroBanner />
 
       <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
-        {/* Section Heading */}
+
         <div className="mb-10 text-center">
           <MdMovie
             className="mx-auto mb-3 text-4xl text-violet-400"
@@ -44,7 +44,7 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Features */}
+
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
           {highlights.map((item) => {
             const Icon = item.icon;
@@ -73,7 +73,7 @@ export default function Home() {
           })}
         </div>
 
-        {/* CTA */}
+
         <div className="mt-14 flex flex-col gap-5 rounded-lg border border-slate-800 bg-slate-900 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
           <div>
             <h3 className="font-display text-xl font-semibold text-white">

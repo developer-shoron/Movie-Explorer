@@ -9,7 +9,7 @@ export default function MovieCard({ show, onSelect }) {
 
   return (
     <div className="group flex flex-col overflow-hidden rounded-lg border border-slate-800 bg-slate-900 transition-colors hover:border-violet-500/50">
-      {/* Poster */}
+
       <div className="aspect-[2/3] w-full overflow-hidden bg-slate-800">
         {poster ? (
           <img
@@ -28,7 +28,7 @@ export default function MovieCard({ show, onSelect }) {
         )}
       </div>
 
-      {/* Movie Info */}
+ 
       <div className="flex flex-1 flex-col gap-3 p-4">
         <h3 className="line-clamp-2 font-sans text-base font-semibold leading-snug text-white">
           {show.name}
@@ -56,7 +56,7 @@ export default function MovieCard({ show, onSelect }) {
           </span>
         </div>
 
-        {/* Details Button */}
+  
         <button
           type="button"
           onClick={() => onSelect(show.id)}

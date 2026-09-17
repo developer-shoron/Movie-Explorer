@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-slate-800 bg-slate-900">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-5 py-8 text-center sm:flex-row sm:justify-between sm:text-left">
-        {/* Logo */}
+
         <div className="flex items-center gap-2">
           <MdMovie
             className="text-xl text-violet-400"
@@ -17,12 +17,11 @@ export default function Footer() {
           </span>
         </div>
 
-        {/* Copyright */}
+     
         <p className="text-sm text-slate-400">
           © 2026 Flicker. Show data courtesy of TVMaze.
         </p>
-
-        {/* Links */}
+    
         <div className="flex items-center gap-5">
           <a
             href="https://github.com"

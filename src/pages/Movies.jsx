@@ -13,7 +13,6 @@ export default function Movies() {
   const [error, setError] = useState(null);
   const [selectedId, setSelectedId] = useState(null);
 
-  // Initial catalog load
   useEffect(() => {
     let cancelled = false;
 
@@ -42,7 +41,7 @@ export default function Movies() {
     };
   }, []);
 
-  // Debounced search
+
   useEffect(() => {
     if (!query.trim()) {
       setSearchResults(null);
@@ -76,7 +75,7 @@ export default function Movies() {
 
   return (
     <section className="mx-auto max-w-6xl px-5 py-12 sm:px-8">
-      {/* Page Heading */}
+   
       <div className="mb-8">
         <div className="mb-3 flex items-center gap-3">
           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800">
@@ -95,12 +94,12 @@ export default function Movies() {
         </p>
       </div>
 
-      {/* Search */}
+
       <div className="mb-8 max-w-xl">
         <SearchBar value={query} onChange={setQuery} />
       </div>
 
-      {/* Movie Grid */}
+   
       <MovieGrid
         shows={shows}
         isLoading={isLoading}
@@ -109,7 +108,7 @@ export default function Movies() {
         query={query}
       />
 
-      {/* Movie Details Modal */}
+   
       {selectedId && (
         <MovieModal
           showId={selectedId}
