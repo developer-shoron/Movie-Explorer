@@ -4,7 +4,7 @@
 
 @layer base {
   * {
-    scrollbar-color: #3a3f4c #14171f;
+    scrollbar-color: #475569 #020617;
   }
 
   html {
@@ -12,27 +12,29 @@
   }
 
   body {
-    @apply bg-void text-ink font-body antialiased;
+    margin: 0;
+    min-width: 320px;
+    background-color: #020617;
+    color: #ffffff;
   }
 
   ::selection {
-    background: #e3aa3d;
-    color: #0c0e13;
+    background: #7c3aed;
+    color: #ffffff;
   }
 
   :focus-visible {
-    outline: 2px solid #e3aa3d;
+    outline: 2px solid #8b5cf6;
     outline-offset: 3px;
   }
 }
 
 @layer utilities {
-  /* Film sprocket-hole rule, used as a structural divider instead of shadows */
-  .sprocket-edge {
-    background-image: radial-gradient(circle, #0c0e13 2.5px, transparent 2.5px);
-    background-size: 16px 100%;
-    background-position: center;
-    height: 8px;
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .line-clamp-3 {
